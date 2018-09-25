@@ -13,50 +13,74 @@ function subtractNumber(numA, numB) {
     return Number(numA) - Number(numB);
 }
 
-function checkNums (num1,num2){
-    if (num1 = num2){
+function checkNums(num1, num2) {
+    if (num1 = num2) {
         return "the values are equal";
     }
-    else if(num2 > num1){
+    else if (num2 > num1) {
         return "true";
     }
-    else{
+    else {
         return "false";
     }
 }
-function Array (a,b,c,d){
-    var words = [a,b,c,d];
+function Array(a, b, c, d) {
+    var words = [a, b, c, d];
     return words;
 }
 
-function convert (minutes){
-    var hours = parseInt(minutes/60);
-    minutes = minutes-(hours*60);
-    return String(hours) + "hours and " +String(minutes); + "minutes"
+function convert(minutes) {
+    var hours = parseInt(minutes / 60);
+    minutes = minutes - (hours * 60);
+    return String(hours) + "hours and " + String(minutes); + "minutes"
 
 }
-function areaPer(radius){
-    area = radius*radius*3.14159;
-    perimeter = 2*radius*3.14159;
-    return area +" Area and the perimeter is" + perimeter;
+function areaPer(radius) {
+    area = radius * radius * 3.14159;
+    perimeter = 2 * radius * 3.14159;
+    return area + " Area and the perimeter is" + perimeter;
 }
 
-function distanceConversion(distance, unit){
+function distanceConversion(distance, unit) {
     var mToKm = 1.60934;
     var kmToM = 0.621371;
-    if (unit = "m"){
-        return distance*mToKm;
+    if (unit = "m") {
+        return distance * mToKm;
     }
-    else{
-        return distance*kmToM;
+    else {
+        return distance * kmToM;
     }
 }
 
-function BMICalculator(weight,height){
-    return weight/(height*height);
+function BMICalculator(weight, height) {
+    return weight / (height * height);
 }
 
-function date(date){
-    
+function date(year, month, day) {
+    month = month-1;
+    var d = new Date(year, month, day);
+    return d;
+
+}
+
+function palindrome(input) {
+    var word = input;
+    var inverse = word.split("").reverse().join("");
+    return word == inverse;
+}
+
+function calc(num1, sign, num2) {
+    if (sign == "+") {
+        return num1 + num2;
+    }
+    else if (sign == "-") {
+        return num1 - num2;
+    }
+    else if (sign == "*") {
+        return num1 * num2;
+    }
+    else if (sign == "/") {
+        return num1 / num2;
+    }
 
 }
